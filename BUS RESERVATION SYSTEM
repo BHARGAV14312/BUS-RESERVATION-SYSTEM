@@ -1,0 +1,60 @@
+#include<stdio.h>
+void sum(int noOf)
+{
+int cvv,cvv1,t,credit,debit,otp;	
+printf("Take the path to book tickets\n");	
+printf("__payment method__\n");	
+printf("1.CREDIT\n");	
+printf("2.DEBIT\n");	
+printf("Enter your choice\n");	
+scanf("%d",&t);	if(t==1)	
+{		
+printf("Enter the credit card no:\n");		
+scanf("%d",&credit);		
+printf("Enter the cvv\n");		
+scanf("%d",&cvv);}		
+else if(t==2)	
+{				
+printf("Enter the debit card no:\n");		
+scanf("%d",&debit);		
+printf("Enter the cvv\n");
+scanf("%d",&cvv1);	
+}	
+printf("Please enter the OTP");	
+scanf("%d",&otp);	
+printf("Total amount is:%d",noOf*100);	
+printf("\n");	
+printf("Please wait for a while.....\n\n\n\n\n");	
+printf("Booking Successful\n\n");	printf("Enter the email id:");	
+char s[100];	
+scanf("%s",s);	
+printf("\nTickets sent to your mail");}
+
+int main(){		
+int true;	
+int a[50],noOf; char in[10],out[10];	
+printf("---------------------------------------------\n");	
+printf("\t\tWELCOME!\n");	
+printf("\t\tTO GO TRAVEL's\n");	
+printf("\t\tRoad to safe ride\n");	
+printf("---------------------------------------------\n");	
+printf("Enter the your Destination");
+scanf("%s",out);
+printf("Enter your location");
+scanf("%s",in);
+printf("The Seat Numbers Available are:\n");	
+for(int i=1;i<=44;i+=4){		
+printf("%d %d   %d %d\n",i,i+1,i+2,i+3);	}	
+while(true)	{	
+printf("Enter the number of tickets:\n");	
+scanf("%d",&noOf);	
+printf("please enter the ticket numbers\n");	
+for(int i=0;i<noOf;i++)	{	
+scanf("%d\n",&a[i]);	
+if(a[i]>48)	{		
+printf("INVALID INPUT\n");		
+continue;}}	
+break; }      
+sum(noOf);
+return 0; 
+}
